@@ -55,12 +55,13 @@ function checkIfCorrect(event) {
     alreadyFound.push(currentOpen.dataset.cellId);
     currentOpen = null;
     if (alreadyFound.length == 8) {
-      youWon();
-      stopGame();
-      window.location.reload();
+      setTimeout(() => {
+        youWon();
+        stopGame();
+        window.location.reload();
+      }, 100);
     }
   } else {
-    // console.log(currentOpen);
     secondOpen = event.target;
     setTimeout(() => {
       hideImg();
