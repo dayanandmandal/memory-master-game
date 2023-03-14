@@ -55,9 +55,9 @@ function checkIfCorrect(event) {
     alreadyFound.push(currentOpen.dataset.cellId);
     currentOpen = null;
     if (alreadyFound.length == 8) {
-      debugger;
       youWon();
       stopGame();
+      window.location.reload();
     }
   } else {
     // console.log(currentOpen);
