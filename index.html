@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="start-timer-parent-div">
+      <input
+        type="button"
+        value="Start"
+        name="start"
+        id="start-button"
+        onclick="startGame(event)"
+        data-game-start="false"
+      />
+      <div class="timer">00:00</div>
+    </div>
+    <div class="game-body" onclick="checkIfCorrect(event)"></div>
+    <div class="total-moves">Total Moves: 0</div>
+    <script src="./index.js"></script>
+    <script src="./checkGame.js"></script>
+  </body>
+</html>
